@@ -1,6 +1,8 @@
 # Introduction to "An introduction into the tools and tutorials available for the analysis of TESS data" a.k.a. Step-0
 
-*This is a first draft of a tutorial for person interested in TESS data but who is a novice computationally. Things that we might want to add include discussion of conda environments, using the conda GUI to start a notebook if thats easier, links to discussion of astro-based scientific computing/command line stuff, etc.  let me know what y'all are thinking*.
+*This is a first draft of a tutorial for person interested in TESS data but who is a novice computationally - its not really feature complete, tested, or edited, but its a runthrough at the level I think we were talking about to see if we're all on the same page*. 
+
+*If this is at the level that the team was thinking, things that we might want to add include discussion of conda environments, using the conda GUI to start a notebook if thats easier, links to discussion of astro-based scientific computing/command line stuff, etc.  Let me know what y'all are thinking*.
 
 *For easing access to those with VERY limited computing resources, we might want to 
 discuss google colab since it requires internet and a browser, but no local compute or storage. If we do this, we should also probably try to do at least copy the introduction 
