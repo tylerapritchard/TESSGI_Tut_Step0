@@ -94,15 +94,15 @@ This should cause your terminal window to start printing debug information, and 
 
 ##### If this worked, and you navigated to an empty folder called "TESS", you should see something like this:
 
-![alt text](/Users/tapritchard/TESSGI/Tutorials/Step0/jupyter-blank.png)
+![newly opened notebook server](jupyter-blank.png)
 
 
 
 This is empty, because the folder is empty!  To create a new notebook from which to work on TESS data and follow along with the tutorials/quickstart, click on "New" on the top right side of the page and select "Python 3" under the notebook heading
 
-![alt text](/Users/tapritchard/TESSGI/Tutorials/Step0/jupyter-new.png)
+![creating a new noteebook](jupyter-new.png)
 
-This will create a new Python 3 notebook called "Untitled" that you can execute python code from:![alt text](/Users/tapritchard/TESSGI/Tutorials/Step0/jupyter-notebook.png)
+This will create a new Python 3 notebook called "Untitled" that you can execute python code from:![newly opened untitled notebook](jupyter-notebook.png)
 
 ### Now, the last thing that our introduction tutorial requires is for lightkurve to be installed
 
@@ -112,6 +112,6 @@ To do this, enter the following command in the text box:
 
 and execute it using the Run button (or shift+return/enter).  If this is successfull, a number of lines of debug should pop up in a cell below this and end in the line (you may have to scroll through the cell) "Succesfully installed ..." followed by a list of packages installed, e.g.:
 
-![alt text](/Users/tapritchard/TESSGI/Tutorials/Step0/jupyter-instlk.png)
+![install lightkurve](jupyter-instlk.png)
 
 ## Congratulations!  Now, you should be able to run other [TESS tutorials]([Data Analysis Tools - TESS Science Support Center](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html)) and start exploring TESS data!
