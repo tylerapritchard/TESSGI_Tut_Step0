@@ -78,7 +78,7 @@ The most common way to do this is to open up our computers command line terminal
 
 #### For Apple OSX - Open up your terminal application under Applications/Utilities/Terminal
 
-You should see something like this: (*I'm pretty sure I'm not using the default color scheme here, it would be good to update it. with whatever the most default of defaults is*)
+You should see something like this: 
 
 ![](/Users/tapritchard/TESSGI/Tutorials/Step0/openterm.gif)
 
@@ -90,12 +90,17 @@ Then, navigate to your target directory (it will open up in your 'home' director
 
 `cd TESS`` This will move your terminal into the TESS directory
 
+![Use the Terminal to make and navigate to a TESS directory](mvTESS.gif)
+
 #### For Windows - navigate to the folder you want to run the tutorials at and open up your command shell
 
-You can do this by p
+*add Windows gif 1*
 
+ You can do this by pressing ALT+D, typing in cmd, then hitting Enter. 
 
-Then, following the [jupyter notebooks documentation](https://docs.jupyter.org/en/latest/running.html), you will start up the jupyter notebook server by entering the following at the command line:
+*Add Windows gif 2*
+
+### Then, following the [jupyter notebooks documentation](https://docs.jupyter.org/en/latest/running.html), you will start up the jupyter notebook server by entering the following at the command line (on both windows and OsX):
 
 `jupyter notebook`
 
@@ -107,9 +112,13 @@ This should cause your terminal window to start printing debug information, and 
 
 This is empty, because the folder is empty!  To create a new notebook from which to work on TESS data and follow along with the tutorials/quickstart, click on "New" on the top right side of the page and select "Python 3" under the notebook heading
 
-![creating a new noteebook](jupyter-new.png)
 
-This will create a new Python 3 notebook called "Untitled" that you can execute python code from:![newly opened untitled notebook](jupyter-notebook.png)
+
+This will create a new Python 3 notebook called "Untitled" that you can execute python code from:
+
+![creating a new noteebook](newnb.gif)
+
+
 
 ### Now, the last thing that our introduction tutorial requires is for lightkurve to be installed
 
