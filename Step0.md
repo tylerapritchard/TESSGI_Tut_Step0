@@ -80,7 +80,7 @@ The most common way to do this is to open up our computers command line terminal
 
 You should see something like this: (*I'm pretty sure I'm not using the default color scheme here, it would be good to update it. with whatever the most default of defaults is*)
 
-![](openterm.m4v)
+![](openterm.mp4)
 
 Then, navigate to your target directory (it will open up in your 'home' directory, /Users/{username}), which is fine.  You can also make a new directory,  say TESS, and move into that directory using the command line,  e.g.
 
@@ -93,7 +93,7 @@ Then, navigate to your target directory (it will open up in your 'home' director
 #### For Windows - navigate to the folder you want to run the tutorials at and open up your command shell
 
 You can do this by p
-ressing ALT+D, typing in cmd, then hitting Enter.  
+
 
 Then, following the [jupyter notebooks documentation](https://docs.jupyter.org/en/latest/running.html), you will start up the jupyter notebook server by entering the following at the command line:
 
