@@ -22,6 +22,10 @@ Notes from discussion w/ Christina:
 
 *using conda/conda-forge to install lightkurve? notes - pip can be run in a notebook as the lightkurve quickstart suggests and I cribbed from*
 
+
+
+*possibly swap some of the illistrative images to gifs*
+
 ## Motivation
 
 Getting started with TESS data and tools is easy! However, it does require a couple of steps which can be daunting if you haven't done them before.  Many astronomers who have a laptop set-up for doing active research will likely have the nescessities available, however others including (but not limited to!) new students, interns, and the interested amateur astronomer, may find this brief guide usefull.  
@@ -76,6 +80,8 @@ The most common way to do this is to open up our computers command line terminal
 
 You should see something like this: (*I'm pretty sure I'm not using the default color scheme here, it would be good to update it. with whatever the most default of defaults is*)
 
+![](openterm.m4v)
+
 Then, navigate to your target directory (it will open up in your 'home' directory, /Users/{username}), which is fine.  You can also make a new directory,  say TESS, and move into that directory using the command line,  e.g.
 
 `cd ~\` This will move to your home directory if you are not already there
@@ -86,7 +92,8 @@ Then, navigate to your target directory (it will open up in your 'home' director
 
 #### For Windows - navigate to the folder you want to run the tutorials at and open up your command shell
 
-You can do this by pressing ALT+D, typing in cmd, then hitting Enter.  
+You can do this by p
+ressing ALT+D, typing in cmd, then hitting Enter.  
 
 Then, following the [jupyter notebooks documentation](https://docs.jupyter.org/en/latest/running.html), you will start up the jupyter notebook server by entering the following at the command line:
 
