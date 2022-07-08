@@ -6,7 +6,21 @@
 
 *For easing access to those with VERY limited computing resources, we might want to 
 discuss google colab since it requires internet and a browser, but no local compute or storage. If we do this, we should also probably try to do at least copy the introduction 
-tutorial in colab even if we were to leave other jupyter vs colab modifications to the reader*
+tutorial in colab even if we were to leave other jupyter vs colab modifications to the reader.  This might not work, I don't know*.
+
+Notes from discussion w/ Christina:
+
+*(add a sentence about how you can do this in just python if you don't want to use a notebook) Also add some discussion of what an environment is, package manager vs environment manager, pip, jupyter notebooks*
+
+*Add some discussion around minimum maximimum python versions, and checks in the process to make sure that the proper versions are installed*
+
+*Add more hand-holding around starting up and using a terminal*
+
+*Add removal discussion - environment in conda or full distribution*
+
+*change workflow to add an environment for TESS, change it to default,*
+
+*using conda/conda-forge to install lightkurve? notes - pip can be run in a notebook as the lightkurve quickstart suggests and I cribbed from*
 
 ## Motivation
 
@@ -22,7 +36,7 @@ Practically speaking, the [subsequent TESS/lightkurve tutorials](https://heasarc
 
 1. That you are operating in a [Jupyter Notebook](https://jupyter.org/) Environment
 
-2. Running a package-controlled 3.6+ version of python, preferably with an environment manager such as [Anaconda](https://www.anaconda.com/products/distribution)
+2. Running a package-controlled 3.6+ version of python, preferably with an environment manager such as [Conda](https://docs.conda.io/en/latest/) (that is installed by default with [Anaconda](https://www.anaconda.com/products/distribution))
 
 3. With a number of packages installed, listed at the top of each tutorial, including (but not limited to) lightkurve
 
@@ -30,13 +44,19 @@ Practically speaking, the [subsequent TESS/lightkurve tutorials](https://heasarc
 
 [Lightkurve](https://docs.lightkurve.org/) is a python package that will be the basis of the subsequent tutorials as it has been designed to work with time-series data from the Kepler and TESS sattelites, and is great for data interaction, exploration, and analysis as it incorporates many tools that the community might want for working with TESS data.  
 
-To work with Lightkurve in these tutorials, we want an environment that will allow us to rapidly and interactively explore and analyze TESS data, with a visible workflow, and to share this workflow with others.  To do this, we plan to write our python analyses/code inside of [Jupyter Notebooks](https://jupyter.org/), which describe themselves as a 'web-based interactive computing platform that combines live code, equations, narrative text, visualizations, and more'.  They are a great way to explore data and to share code, analyses, and results like we do in the susbsequent tutorials, and run in your browser once set up. Their usage has also become incredibly common across both many scientific fields as well as industry usage in some fields such as data science and business analytics.  
+To work with Lightkurve in these tutorials, we want an environment that will allow us to rapidly and interactively explore and analyze TESS data, with a visible workflow, and to share this workflow with others.  To do this, we plan to write our python analyses/code inside of [Jupyter Notebooks](https://jupyter.org/), which describe themselves as a 'web-based interactive computing platform that combines live code, equations, narrative text, visualizations, and more'.  They are a great way to explore data and to share code, analyses, and results like we do in the susbsequent tutorials, and run in your browser once set up. Their usage has also become incredibly common across both many scientific fields as well as industry usage in some fields such as data science and business analytics. 
 
-While Jupyter notebooks may run a variety of programming languages, lightkurve and the following tutorials are python-based, and specfically require a recent version of python 3 to run (and we recommend running the most recent version). To install this, we recommend working with an environment manager such as [Anaconda](https://www.anaconda.com/products/distribution) which will allow you to resolve dependencies between the different required packages, and to have different 'environments' which will allow different versions of python and configurations of packages to be installed simultaneously, with an easy ability to swap between them.  
+Working with TESS and lightcurve does not *require* the use of Jupyter Notebooks, despite our tutorials presenting them in that style.  All of tutorial python commands can be run from the python command line or in a python script, although the tutorials may require minimal modifications to the plotting commands to make the graphics appear.  
+
+Lightkurve requires a relatively recent version of python 3.X (although, on rare occasions, not the most recent version) as well as scipy and other python packages to be installed.  
+
+A <u>package manager</u>, such as [pip](https://pypi.org/project/pip/) (the default one installed with python), will keep track of python package requirements and when you install a new package, install both missing package dependencies and upgrade/downgrade package versions to (hopefully) meet the requirements of all of your installed packages. You will however, only ever have one version of python and one list of installed packages.
+
+An <u>environment manager</u>, such as [Conda](https://docs.conda.io/en/latest/) (and which is installed as a part of Anaconda), will allow you to have multiple, distinct, parralel, environments that you can switch between with a single command.  Each environment can (and will) have unique, and different versions of python and python packages.  Environments are a usefull (and almost mandatory) tool when you have multiple python workflows that have different, and conflicting, package and/or python requirements. Conda in particular can serve as both a package manager and an environment manager. 
 
 ## How do we get there?
 
-For the remainder of this tutorial, we will assume that you will use [Anaconda](https://www.anaconda.com/products/distribution) to install python, jupyter notebooks, lightkurve, and dependant packages.  We choose Anaconda as it is free to individual users, its package managing tool conda is open-source, the packages in its base repository undergo a rigerous security check, is available for OsX, Windows, and Linux, and it is widely used by both the astronomy and wider community. It also includes Jupyter notebooks, matplotlib, and many commonly used packages in its default distribution. Other great options are available such as [virtualenviroment]([virtualenv · PyPI](https://pypi.org/project/virtualenv/)), [pipenv]([pipenv · PyPI](https://pypi.org/project/pipenv/)), and more, and may be used to achieve similar results (although the exact steps achieve them will be left to the reader).  
+For the remainder of this tutorial, we will assume that you will use [Anaconda](https://www.anaconda.com/products/distribution) to install python, jupyter notebooks, lightkurve, and dependant packages.  We choose Anaconda as it is free to individual users, its package managing tool conda is open-source, the packages in its base repository undergo a rigerous security check, is available for OsX, Windows, and Linux, and it is widely used by both the astronomy and wider community. It also includes Jupyter notebooks, matplotlib, and many commonly used packages in its default distribution. Other great options are available such as [virtualenviroment](https://pypi.org/project/virtualenv/), [pipenv](https://pypi.org/project/pipenv/), and more, and may be used to achieve similar results (although the exact steps achieve them will be left to the reader).  
 
 ### Step 1 - Download Anaconda
 
@@ -44,7 +64,7 @@ Install [Anaconda](https://www.anaconda.com/products/distribution) on your opera
 
 ### Step 2 - Install Anaconda
 
-Once downloaded, use the file to install Anaconda, following the [instillation instructions]([Installation — Anaconda documentation](https://docs.anaconda.com/anaconda/install/)) from the Anaconda Documentation.  Choose your operating system (e.g. Apple OsX, Windows, etc) from the left side bar to see the appropriate instructions.
+Once downloaded, use the file to install Anaconda, following the [instillation instructions](https://docs.anaconda.com/anaconda/install/) from the Anaconda Documentation.  Choose your operating system (e.g. Apple OsX, Windows, etc) from the left side bar to see the appropriate instructions.
 
 ### Step 3 - Start and Enter a Jupyter Notebook
 
@@ -53,6 +73,8 @@ With anaconda installed, we next want to start a jupyter notebook with a python 
 The most common way to do this is to open up our computers command line terminal and navigate to the directory from which you would like to work on TESS data using the command line. 
 
 #### For Apple OSX - Open up your terminal application under Applications/Utilities/Terminal
+
+You should see something like this: (*I'm pretty sure I'm not using the default color scheme here, it would be good to update it. with whatever the most default of defaults is*)
 
 Then, navigate to your target directory (it will open up in your 'home' directory, /Users/{username}), which is fine.  You can also make a new directory,  say TESS, and move into that directory using the command line,  e.g.
 
@@ -66,7 +88,7 @@ Then, navigate to your target directory (it will open up in your 'home' director
 
 You can do this by pressing ALT+D, typing in cmd, then hitting Enter.  
 
-Then, following the [jupyter notebooks documentation]([Running the Notebook &#8212; Jupyter Documentation 4.1.1 alpha documentation](https://docs.jupyter.org/en/latest/running.html)), you will start up the jupyter notebook server by entering the following at the command line:
+Then, following the [jupyter notebooks documentation](https://docs.jupyter.org/en/latest/running.html), you will start up the jupyter notebook server by entering the following at the command line:
 
 `jupyter notebook`
 
