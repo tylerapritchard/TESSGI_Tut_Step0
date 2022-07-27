@@ -54,6 +54,8 @@ Install [Anaconda](https://www.anaconda.com/products/distribution) on your opera
 
 Once downloaded, use the file to install Anaconda, following the [instillation instructions](https://docs.anaconda.com/anaconda/install/) from the Anaconda Documentation.  Choose your operating system (e.g. Apple OsX, Windows, etc) from the left side bar to see the appropriate instructions.
 
+
+
 ### Step 3 - Start and Enter a Jupyter Notebook
 
 With anaconda installed, we next want to start a jupyter notebook with a python 3 kernal.  
@@ -162,6 +164,22 @@ This command can be executed using the Run button (or shift+return/enter).  If t
 
 ## Congratulations!  Now, you should be able to run the [introduction to TESS tools and tutorials notebook](https://heasarc.gsfc.nasa.gov/docs/tess/TESS-Intro.html "An introduction into the tools and tutorials available for the analysis of TESS data"), other [TESS tutorials]([Data Analysis Tools - TESS Science Support Center](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html)),  and start exploring TESS data!
 
-## What if something went wrong?
+# 
 
-If you're having trouble installing Anaconda, see [their help page](https://docs.anaconda.com/anaconda/install/)  If you having trouble past that, you can uninstall Anaconda and try again from scratch.  If you completed <u>Stretch Goal #2</u> you can also delete your `TESS` environment (using `conda remove --name TESS --all`) and try again by creating a new environment.  If something is broken in the Jupyter notebook environment you can restart the kernal by going to the 'kernal' menu, or `control-c` the "notebook server" in your terminal and re-start it to re-initialize everything.  
+# What if something went wrong?
+
+- If you're having trouble installing Anaconda, see [their help page](https://docs.anaconda.com/anaconda/install/)  
+
+- if you are having trouble opening a jupyter notebook via the terminal, you can try the [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator) application that has a graphical user interface and comes installed with anaconda. ![Anaconda Navigator](AnacondaNavigator.png)
+  
+  - You can Add Channels (#1; like Conda-Forge in <u>Stretch Goal #1</u>) using the channels button. 
+  
+  - You can create anew environment (#2, side tab, like in <u>Stretch Goal #2</u>) and Switch to it (#3; in the drop-down menu)
+  
+  - You can launch a Jupyter Notebook (#4; this will open in your home directory)
+
+- If you are having trouble past that, you can uninstall Anaconda and try again from scratch.  
+  
+  - If you completed <u>Stretch Goal #2</u> you can also delete your `TESS` environment (using `conda remove --name TESS --all`) and try again by creating a new environment.  
+
+- If something is broken in the Jupyter notebook environment you can restart the kernal by going to the 'kernal' menu, or `control-c` the "notebook server" in your terminal and re-start it to re-initialize everything.
