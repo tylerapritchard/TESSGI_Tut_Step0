@@ -2,7 +2,7 @@
 
 ## Motivation
 
-Getting started with TESS data and tools is easy! However, it does require a couple of steps which can be daunting if you haven't done them before.  Many astronomers who have a laptop set-up for doing active research will likely have the necessities available, however others including (but not limited to!) new students, interns, and the interested amateur astronomer, may find this brief guide useful.  
+Getting started with Lightkurve and Kepler/K2/TESS data and tools is easy! However, it does require a couple of steps which can be daunting if you haven't done them before.  Many astronomers who have a laptop set-up for doing active research will likely have the necessities available, however others including (but not limited to!) new students, interns, and the interested amateur astronomer, may find this brief guide useful.  
 
 ## Learning Goals
 
