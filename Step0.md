@@ -149,7 +149,7 @@ This command can be executed using the Run button (or shift+return/enter).  If t
 
 
 - Jupyter Notebooks will load in the default browser. If you want to use a different browser you have to manually change the default one in your system settings.
-	- If your browser refuses to run the interactive widgets (e.g. lightkurve.interact()), you will need to manually set up the socket for Bokeh - e.g. for OsX type "conda env config vars set `BOKEH_ALLOW_WS_ORIGIN=localhost:8888` in the terminal prior to running `jupyter notebook`
+	- If your browser refuses to run the interactive widgets (e.g. lightkurve.interact()), you will need to manually set up the socket for Bokeh - e.g. for OsX type "conda env config vars set `BOKEH_ALLOW_WS_ORIGIN=localhost:8888` " in the terminal prior to running `jupyter notebook`
 
 - If Jupyter Notebooks are running slow:
 	- If you have multiple notebooks open, shutting down notebooks from the "Running" tab may improve your performance
