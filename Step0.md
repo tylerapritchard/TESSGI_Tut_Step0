@@ -82,7 +82,7 @@ You can do this by pressing ALT+D, typing in cmd, then hitting Enter.
 
 ![Windows](images/windows.gif)
 
-#### <u>Stretch goal #1: Add conda-forge to your repository list:</u>
+#### <u>Stretch goal #1: Add conda-forge to your repository list:[^1]</u>
 
 When Conda, our environment, goes to install a new software page it gets a list of available packages (and their requirements) from a repository, which is effectively a software package warehouse. The default repository installed with Anaconda is one that is curated by the company and is designed for stable, robust packages that pass certain standards for enterprise needs. These are excellent, but miss many scientific research packages (such as Lightkurve) that are open source and community developed, but more niche or not targeted at commercial users. 
 
@@ -158,8 +158,6 @@ To do this, enter the following command in the text box:
 
 `! python -m pip install lightkurve --upgrade`
 
-
-
 This command can be executed using the Run button (or shift+return/enter).  If this is successful, a number of lines of debug should pop up in a cell below this and end in the line (you may have to scroll through the cell) "Successfully installed ..." followed by a list of packages installed, e.g.:
 
 ![install lightkurve](images/jupyter-instlk.png)
@@ -185,3 +183,19 @@ This command can be executed using the Run button (or shift+return/enter).  If t
   - If you completed <u>Stretch Goal #2</u> you can also delete your `TESS` environment (using `conda remove --name TESS --all`) and try again by creating a new environment.  
 
 - If something is broken in the Jupyter notebook environment, you can restart the kernel by going to the 'kernel' menu, or `control-c` the "notebook server" in your terminal and re-start it to re-initialize everything.
+
+
+
+[^1]: When Conda, our environment, goes to install a new software page it gets a list of available packages (and their requirements) from a repository, which is effectively a software package warehouse. The default repository installed with Anaconda is one that is curated by the company and is designed for stable, robust packages that pass certain standards for enterprise needs. These are excellent, but miss many scientific research packages (such as Lightkurve) that are open source and community developed, but more niche or not targeted at commercial users.
+
+	[**Conda-Forge**](https://conda-forge.org/) is a community led open-source repository that uses github and "continuous integration" software practices to allow most open source python packages to distribute themselves via the Conda environment manager. These practices, and the lack of hand-curation, also means that many conda-forge packages are more up-to date (but possibly not more stable) than those on the Anaconda repository. **Lightkurve** is available on both conda-forge and [pip](https://pypi.org/project/pip/) (the [PyPi](https://pypi.org/) python package manager), but not the default Anaconda repository.
+
+	The default tutorial below suggests to install lightkurve via pip - however this can introduce inconsistencies in an environment in the future if you were to install more packages since you're now using multiple package managers. **<u>The best practice is to only use one package/environment manage unless unavoidable.</u>** To this end we will add the conda-forge repository channel and install lightkurve via conda to ensure consistency.
+
+	Conda considers each repository its own 'channel', and so to add the conda-forge repository via the command line terminal:
+
+	`conda config --add channels conda-forge`
+
+	You can now install python packages that are in the conda-forge repository, however there is not a strict preference in where to source a package between the two repositories. To change this, and reduce the chance of future errors, you can activate `strict` channel priority via the command line terminal:
+
+	`conda config --set channel_priority strict`
