@@ -74,7 +74,7 @@ Then, navigate to your target directory (it will open up in your 'home' director
 
 `mkdir TESS`This will make a new directory with the name "TESS"
 
-`cd TESS`` This will move your terminal session into the TESS directory
+`cd TESS` This will move your terminal session into the TESS directory
 
 ![Use the Terminal to make and navigate to a TESS directory](images/mvTESS.gif)
 
