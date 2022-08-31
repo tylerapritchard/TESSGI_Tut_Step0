@@ -82,9 +82,9 @@ You can do this by pressing ALT+D, typing in cmd, then hitting Enter.
 
 ![Windows](images/windows.gif)
 
-#### <u>Stretch goal #1: Add conda-forge to your repository list:[^1]</u>
+#### <u>Stretch goal #1: Add conda-forge to your repository list[^1]</u>
 
-#### <u>Stretch Goal #2: Create and enter a new Conda environment:[^2]</u>
+#### <u>Stretch Goal #2: Create and enter a new Conda environment[^2]</u>
 
 ### Then, following the [jupyter notebooks documentation](https://docs.jupyter.org/en/latest/running.html), you will start up the jupyter notebook server by entering the following at the command line (on both windows and OsX):
 
@@ -104,7 +104,7 @@ This will create a new Python 3 notebook called "Untitled" that you can execute 
 
 ### Now, the last thing that our introduction tutorial requires is for lightkurve to be installed
 
-#### <u>Stretch Goal #1.5: Install Lightkurve with `conda` instead of `pip`:[^1.5]</u>
+#### <u>Stretch Goal #1.5: Install Lightkurve with `conda` instead of `pip`[^3]</u>
 
 #### Otherwise, we can install Lightkurve using the built-in python pip package manager
 
@@ -138,7 +138,9 @@ This command can be executed using the Run button (or shift+return/enter).  If t
 
 
 
-[^1]: When Conda, our environment, goes to install a new software page it gets a list of available packages (and their requirements) from a repository, which is effectively a software package warehouse. The default repository installed with Anaconda is one that is curated by the company and is designed for stable, robust packages that pass certain standards for enterprise needs. These are excellent, but miss many scientific research packages (such as Lightkurve) that are open source and community developed, but more niche or not targeted at commercial users.
+[^1]: #### <u>Stretch goal #1: Add conda-forge to your repository list</u>
+
+	When Conda, our environment, goes to install a new software page it gets a list of available packages (and their requirements) from a repository, which is effectively a software package warehouse. The default repository installed with Anaconda is one that is curated by the company and is designed for stable, robust packages that pass certain standards for enterprise needs. These are excellent, but miss many scientific research packages (such as Lightkurve) that are open source and community developed, but more niche or not targeted at commercial users.
 
 	[**Conda-Forge**](https://conda-forge.org/) is a community led open-source repository that uses github and "continuous integration" software practices to allow most open source python packages to distribute themselves via the Conda environment manager. These practices, and the lack of hand-curation, also means that many conda-forge packages are more up-to date (but possibly not more stable) than those on the Anaconda repository. **Lightkurve** is available on both conda-forge and [pip](https://pypi.org/project/pip/) (the [PyPi](https://pypi.org/) python package manager), but not the default Anaconda repository.
 
@@ -152,7 +154,8 @@ This command can be executed using the Run button (or shift+return/enter).  If t
 
 	`conda config --set channel_priority strict`
 
-[^2]: Different python packages have different requirements, and when running multiple projects or pipelines it is entirely possible to need to use two packages that require different versions of the same package (including even the version of python itself!).  Environment managers help resolve this by allowing you to create multiple silos of installed packages that you can easily switch through depending on your needs.  **<u>The best practice here is to create a new environment for every particular project or task to ensure that when you install or modify python packages you don't break anything in any python workflow, and to avoid modifying the base environment</u>.** 
+[^2]: #### <u>Stretch Goal #2: Create and enter a new Conda environment</u>
+	Different python packages have different requirements, and when running multiple projects or pipelines it is entirely possible to need to use two packages that require different versions of the same package (including even the version of python itself!).  Environment managers help resolve this by allowing you to create multiple silos of installed packages that you can easily switch through depending on your needs.  **<u>The best practice here is to create a new environment for every particular project or task to ensure that when you install or modify python packages you don't break anything in any python workflow, and to avoid modifying the base environment</u>.** 
 
 	Below we install lightkurve, and following the default tutorial this will be installed in your default environment, which according to best practices should be left minimally changed.  Here we will create a new environment for the TESS tutorials and activate it so that when we install Lightkurve it will get installed in our new environment.  A new environment will not see any of the packages in the base environment, so we will also have to pass a list of packages.  We will not include the Lightkurve package in this list, although you could if you performed <u>Stretch Goal #1</u>.  
 
@@ -176,7 +179,8 @@ This command can be executed using the Run button (or shift+return/enter).  If t
 
 	**This will need to be entered each time you start a new terminal session** to enter the TESS environment, or added to your startup profile (e.g. .bashrc, .profile, etc) to automate this.  
 
-[^1.5]: Assuming that you performed <u>Stretch Goal #1</u> above, you can install lightkurve with conda (instead of using pip as below):
+[^3]: #### <u>Stretch Goal #1.5: Install Lightkurve with `conda` instead of `pip`</u>
+	Assuming that you performed <u>Stretch Goal #1</u> above, you can install lightkurve with conda (instead of using pip as below):
 
 	`! conda install lightkurve -y`
 
