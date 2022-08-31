@@ -6,11 +6,11 @@ Getting started with TESS data and tools is easy! However, it does require a cou
 
 ## Learning Goals
 
-In this tutorial we will take you from a brand new laptop or computing environment to an environment that will allow you to run the [introduction to TESS tools and tutorials notebook](https://heasarc.gsfc.nasa.gov/docs/tess/TESS-Intro.html "An introduction into the tools and tutorials available for the analysis of TESS data"), and begin exploring and working with TESS data. 
+In this tutorial we will take you from a brand new laptop or computing environment to an environment that will allow you to run the [`Lightkurve` Tutorial Notebooks](https://docs.lightkurve.org/tutorials/), and begin exploring and working with Kepler, TESS, and other Time-Domain data. 
 
 ## What This Means in Practice
 
-Practically speaking, the [subsequent TESS/lightkurve tutorials](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html) are designed around the concept of using Python and associated packages to interact with the TESS data in an interactive Jupyter Notebook environment. This means that the tutorials will make the following assumptions:
+Practically speaking, the [subsequent Lightkurve tutorials](https://docs.lightkurve.org/tutorials/) are designed around the concept of using Python and associated packages to interact with the Kepler and TESS data in an interactive Jupyter Notebook environment. This means that the tutorials will make the following assumptions:
 
 1. That you are operating in a [Jupyter Notebook](https://jupyter.org/) Environment
 
@@ -116,13 +116,14 @@ To do this, enter the following command in the text box:
 
 This command can be executed using the Run button (or shift+return/enter).  If this is successful, a number of lines of debug should pop up in a cell below this and end in the line (you may have to scroll through the cell) "Successfully installed ..." followed by a list of packages installed, e.g.:
 
-![install lightkurve](images/jupyter-instlk.png)
+![install Lightkurve](images/jupyter-instlk.png)
 
-## Congratulations!  Now, you should be able to run the [introduction to TESS tools and tutorials notebook](https://heasarc.gsfc.nasa.gov/docs/tess/TESS-Intro.html "An introduction into the tools and tutorials available for the analysis of TESS data"), other [TESS tutorials](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html),  and start exploring TESS data!
+## Congratulations!  Now, you should be able to run the other [Lightkurve tutorials](https://docs.lightkurve.org/tutorials/),  and start exploring Kepler, K2, TESS, and other Time-Domain data!
 
-### **To run the TESS Data Analysis Tools tutorials on your local machine, from the [Data Analysis Tools Webpage](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html):**
-- Click the "<u>Download</u>" link in the middle column next to the tutorial notebook that you would like to run
-	- This will download a jupyter notebook ("TESS-Intro.ipynb" for the first tutorial) file into your default download directory
+### **To run the other Lightkurve tutorials on your local machine, from the [Lightkurve tutorials webpage](https://docs.lightkurve.org/tutorials/):**
+- Click on the tutorial that you would like to run
+- Click the "<u>Download</u>" link in the top-right of the webpage, next to the 'Notebook' button with the orange jupyter symbol
+	- This will download a jupyter notebook ("what-are-lightcurve-objects.ipynb" for the first tutorial) file into your default download directory
 
 - Move this file into the "TESS" folder that you opened up your jupyter notebook server from
 
