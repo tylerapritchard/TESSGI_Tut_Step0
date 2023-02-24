@@ -40,7 +40,7 @@ For the remainder of this tutorial, we will assume that you will use [Anaconda](
 
 ## What if I can't do this?
 
-This workflow requires only a modest amount of computing power and should be functional on most any home computer or laptop with a high-speed internet connection, and if you have access to these two items and intend to work with TESS data we strongly encourage you to follow the below workflow.  If you are unable to do this however (such as having access to only a mobile device, or strict internet data caps) one potential solution is to use [Google Colab](https://colab.research.google.com/?utm_source=scs-index).  Google Colab is a cloud-based  'Jupyter notebook' like environment, where all of your data downloads and computer processing live in the cloud on a remote machine.  The upside to this is that all you need is a web-browser and a stable internet connection to participate in TESS science.  The downside is that some aspects of the notebook usage may be slower or more cumbersome, and the [TESS Data-Processing Tutorial notebooks](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html) will require some modifications to work.  We have Translated the first tutorial into a Colab notebook [here](https://colab.research.google.com/drive/1kNUcBBc2x_06PupFIdV7RAiGEmOoi0LL?usp=sharing), and leave any modifications necessary for future notebooks as an exercise for the reader. 
+This workflow requires only a modest amount of computing power and should be functional on most any home computer or laptop with a high-speed internet connection, and if you have access to these two items and intend to work with TESS data we strongly encourage you to follow the below workflow.  If you are unable to do this however (such as having access to only a mobile device, or strict internet data caps) one potential solution is to use a cloud-based  'Jupyter notebook' like environment, where all of your data downloads and computer processing live in the cloud on a remote machine.  The upside to this is that all you need is a web-browser and a stable internet connection to participate in TESS science.  The downside is that some aspects of the notebook usage may be slower or more cumbersome, and the [TESS Data-Processing Tutorial notebooks](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html) will require some modifications to work.  We reccomend two such platforms - the [Timeseries Integrated Knowledge Engine (TIKE)](https://timeseries.science.stsci.edu/)  and [Google Colab]([Google Colab](https://colab.research.google.com/?utm_source=scs-index)). TIKE is an astronomy specific notebook server with environments created specifically to work with TESS data and common astronomy packages that may be of greatest use to most professional astronomers.  Google Colab is more 'industry standard' and scalable for large numbers of users without academic affiliations, although may require additional setup.  We have Translated the first tutorial into a Colab notebook [here](https://colab.research.google.com/drive/1kNUcBBc2x_06PupFIdV7RAiGEmOoi0LL?usp=sharing), and leave any modifications necessary for future notebooks as an exercise for the reader. 
 
 Some features are not supported by Google Colab - most notably interactive plots made with the Bokeh package (e.g. Lightkurve.interact())
 
@@ -121,13 +121,16 @@ This command can be executed using the Run button (or shift+return/enter).  If t
 ## Congratulations!  Now, you should be able to run the [introduction to TESS tools and tutorials notebook](https://heasarc.gsfc.nasa.gov/docs/tess/TESS-Intro.html "An introduction into the tools and tutorials available for the analysis of TESS data"), other [TESS tutorials](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html),  and start exploring TESS data!
 
 ### **To run the TESS Data Analysis Tools tutorials on your local machine, from the [Data Analysis Tools Webpage](https://heasarc.gsfc.nasa.gov/docs/tess/data-analysis-tools.html):**
+
 - Click the "<u>Download</u>" link in the middle column next to the tutorial notebook that you would like to run
-	- This will download a jupyter notebook ("TESS-Intro.ipynb" for the first tutorial) file into your default download directory
+  
+  - This will download a jupyter notebook ("TESS-Intro.ipynb" for the first tutorial) file into your default download directory
 
 - Move this file into the "TESS" folder that you opened up your jupyter notebook server from
 
 - There will now be a new notebook visible in your jupyter notebook browser, which you can double-click to start up the notebook tutorial
-	- The notebook browser is the web browser window that pops up after you type `jupyter notebook` into your terminal, and from which you opened up your test notebook
+  
+  - The notebook browser is the web browser window that pops up after you type `jupyter notebook` into your terminal, and from which you opened up your test notebook
 
 # What if something went wrong?
 
@@ -147,64 +150,64 @@ This command can be executed using the Run button (or shift+return/enter).  If t
 
 - If something is broken in the Jupyter notebook environment, you can restart the kernel by going to the 'kernel' menu, or `control-c` the "notebook server" in your terminal and re-start it to re-initialize everything.
 
-
 - Jupyter Notebooks will load in the default browser. If you want to use a different browser you have to manually change the default one in your system settings.
-	- If your browser refuses to run the interactive widgets (e.g. Lightkurve.interact()), you will need to manually set up the socket for Bokeh - e.g. for OsX type "conda env config vars set `BOKEH_ALLOW_WS_ORIGIN=localhost:8888` " in the terminal prior to running `jupyter notebook`
+  
+  - If your browser refuses to run the interactive widgets (e.g. Lightkurve.interact()), you will need to manually set up the socket for Bokeh - e.g. for OsX type "conda env config vars set `BOKEH_ALLOW_WS_ORIGIN=localhost:8888` " in the terminal prior to running `jupyter notebook`
 
 - If Jupyter Notebooks are running slow:
-	- If you have multiple notebooks open, shutting down notebooks from the "Running" tab may improve your performance
-	- Any jupyter notebooks servers that you start up will keep running until they are stopped, occupying both CPU and memory. Stopping them is generally done by either using the `Quit` button in the juypter notebook browser, or using `ctrl + c` in your terminal that is running the notebook server.
-	- You can see a list of the running jupyter notebook servers by typing `jupyter server list` into the console
-
+  
+  - If you have multiple notebooks open, shutting down notebooks from the "Running" tab may improve your performance
+  - Any jupyter notebooks servers that you start up will keep running until they are stopped, occupying both CPU and memory. Stopping them is generally done by either using the `Quit` button in the juypter notebook browser, or using `ctrl + c` in your terminal that is running the notebook server.
+  - You can see a list of the running jupyter notebook servers by typing `jupyter server list` into the console
 
 [^1]: ### <u>Stretch goal #1: Add conda-forge to your repository list</u>
 
-	When Conda, our environment, goes to install a new software page it gets a list of available packages (and their requirements) from a repository, which is effectively a software package warehouse. The default repository installed with Anaconda is one that is curated by the company and is designed for stable, robust packages that pass certain standards for enterprise needs. These are excellent, but miss many scientific research packages (such as Lightkurve) that are open source and community developed, but more niche or not targeted at commercial users.
-
-	[**Conda-Forge**](https://conda-forge.org/) is a community led open-source repository that uses github and "continuous integration" software practices to allow most open source Python packages to distribute themselves via the Conda environment manager. These practices, and the lack of hand-curation, also means that many conda-forge packages are more up-to date (but possibly not more stable) than those on the Anaconda repository. **Lightkurve** is available on both conda-forge and [pip](https://pypi.org/project/pip/) (the [PyPi](https://pypi.org/) Python package manager), but not the default Anaconda repository.
-
-	The default tutorial below suggests to install Lightkurve via pip - however this can introduce inconsistencies in an environment in the future if you were to install more packages since you're now using multiple package managers. **<u>The best practice is to only use one package/environment manage unless unavoidable.</u>** To this end we will add the conda-forge repository channel and install Lightkurve via conda to ensure consistency.
-
-	Conda considers each repository its own 'channel', and so to add the conda-forge repository via the command line terminal:
-
-	`conda config --add channels conda-forge`
-
-	You can now install Python packages that are in the conda-forge repository, however there is not a strict preference in where to source a package between the two repositories. To change this, and reduce the chance of future errors, you can activate `strict` channel priority via the command line terminal:
-
-	`conda config --set channel_priority strict`
+    When Conda, our environment, goes to install a new software page it gets a list of available packages (and their requirements) from a repository, which is effectively a software package warehouse. The default repository installed with Anaconda is one that is curated by the company and is designed for stable, robust packages that pass certain standards for enterprise needs. These are excellent, but miss many scientific research packages (such as Lightkurve) that are open source and community developed, but more niche or not targeted at commercial users.
+    
+    [**Conda-Forge**](https://conda-forge.org/) is a community led open-source repository that uses github and "continuous integration" software practices to allow most open source Python packages to distribute themselves via the Conda environment manager. These practices, and the lack of hand-curation, also means that many conda-forge packages are more up-to date (but possibly not more stable) than those on the Anaconda repository. **Lightkurve** is available on both conda-forge and [pip](https://pypi.org/project/pip/) (the [PyPi](https://pypi.org/) Python package manager), but not the default Anaconda repository.
+    
+    The default tutorial below suggests to install Lightkurve via pip - however this can introduce inconsistencies in an environment in the future if you were to install more packages since you're now using multiple package managers. **<u>The best practice is to only use one package/environment manage unless unavoidable.</u>** To this end we will add the conda-forge repository channel and install Lightkurve via conda to ensure consistency.
+    
+    Conda considers each repository its own 'channel', and so to add the conda-forge repository via the command line terminal:
+    
+    `conda config --add channels conda-forge`
+    
+    You can now install Python packages that are in the conda-forge repository, however there is not a strict preference in where to source a package between the two repositories. To change this, and reduce the chance of future errors, you can activate `strict` channel priority via the command line terminal:
+    
+    `conda config --set channel_priority strict`
 
 [^2]: ### <u>Stretch Goal #2: Create and enter a new Conda environment</u>
 
-	Different Python packages have different requirements, and when running multiple projects or pipelines it is entirely possible to need to use two packages that require different versions of the same package (including even the version of Python itself!).  Environment managers help resolve this by allowing you to create multiple silos of installed packages that you can easily switch through depending on your needs.  **<u>The best practice here is to create a new environment for every particular project or task to ensure that when you install or modify Python packages you don't break anything in any Python workflow, and to avoid modifying the base environment</u>.** 
-
-	Below we install Lightkurve, and following the default tutorial this will be installed in your default environment, which according to best practices should be left minimally changed.  Here we will create a new environment for the TESS tutorials and activate it so that when we install Lightkurve it will get installed in our new environment.  A new environment will not see any of the packages in the base environment, so we will also have to pass a list of packages.  We will not include the Lightkurve package in this list, although you could if you performed <u>Stretch Goal #1</u>.  
-
-	The packages we will install *explicitly* are:
-
-	- Python - to get a recent version of Python 3.x
-
-	- notebook - for Jupyter notebooks
-
-	There will also be a (significant) number of dependent packages that that these packages require to be functional, which conda will install.  
-
-	We can create an environment named `TESS` including the specific packages above using the command-line terminal:
-
-	`conda create --name TESS Python notebook`
-
-	and entering `y` to proceed when prompted
-
-	This has created a new environment, however, at the command-line we are still in our default environment.  To activate our new environment we enter:
-
-	`conda activate TESS`
-
-	**This will need to be entered each time you start a new terminal session** to enter the TESS environment, or added to your startup profile (e.g. .bashrc, .profile, etc) to automate this.  
+    Different Python packages have different requirements, and when running multiple projects or pipelines it is entirely possible to need to use two packages that require different versions of the same package (including even the version of Python itself!).  Environment managers help resolve this by allowing you to create multiple silos of installed packages that you can easily switch through depending on your needs.  **<u>The best practice here is to create a new environment for every particular project or task to ensure that when you install or modify Python packages you don't break anything in any Python workflow, and to avoid modifying the base environment</u>.** 
+    
+    Below we install Lightkurve, and following the default tutorial this will be installed in your default environment, which according to best practices should be left minimally changed.  Here we will create a new environment for the TESS tutorials and activate it so that when we install Lightkurve it will get installed in our new environment.  A new environment will not see any of the packages in the base environment, so we will also have to pass a list of packages.  We will not include the Lightkurve package in this list, although you could if you performed <u>Stretch Goal #1</u>.  
+    
+    The packages we will install *explicitly* are:
+    
+    - Python - to get a recent version of Python 3.x
+    
+    - notebook - for Jupyter notebooks
+    
+    There will also be a (significant) number of dependent packages that that these packages require to be functional, which conda will install.  
+    
+    We can create an environment named `TESS` including the specific packages above using the command-line terminal:
+    
+    `conda create --name TESS Python notebook`
+    
+    and entering `y` to proceed when prompted
+    
+    This has created a new environment, however, at the command-line we are still in our default environment.  To activate our new environment we enter:
+    
+    `conda activate TESS`
+    
+    **This will need to be entered each time you start a new terminal session** to enter the TESS environment, or added to your startup profile (e.g. .bashrc, .profile, etc) to automate this.  
 
 [^3]: ### <u>Stretch Goal #1.5: Install Lightkurve with `conda` instead of `pip`</u>
 
-	Assuming that you performed <u>Stretch Goal #1</u> above, you can install Lightkurve with conda (instead of using pip as below):
-
-	`! conda install Lightkurve -y`
-
-	(if this installs a different Python you may need to restart your Jupyter notebook from the terminal)
-
-	This is following the best practice of using only a single environment/package manager where possible.  And, if you started up Jupyter notebooks after creating and activating a new `TESS` environment, this will install Lightkurve into your `TESS` environment.  
+    Assuming that you performed <u>Stretch Goal #1</u> above, you can install Lightkurve with conda (instead of using pip as below):
+    
+    `! conda install Lightkurve -y`
+    
+    (if this installs a different Python you may need to restart your Jupyter notebook from the terminal)
+    
+    This is following the best practice of using only a single environment/package manager where possible.  And, if you started up Jupyter notebooks after creating and activating a new `TESS` environment, this will install Lightkurve into your `TESS` environment.  
